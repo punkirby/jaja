@@ -1,0 +1,96 @@
+body {
+    max-width: 560px;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(https://i0.wp.com/revistareplicante.com/wp-content/uploads/2010/05/psicodelia.jpg?ssl=1);
+    background-position: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://i0.wp.com/revistareplicante.com/wp-content/uploads/2010/05/psicodelia.jpg?ssl=1); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1; 
+    animation: rotacionInfinita 1s linear infinite; 
+}
+
+@keyframes rotacionInfinita {
+    from {
+        transform: rotate(0deg) scale(10); 
+    }
+    to {
+        transform: rotate(360deg) scale(10); 
+    }
+}
+
+
+img {
+    max-width: 100%;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 50px;
+    flex: 1 1 0;
+    justify-content: center;    
+}
+
+.fichas div{
+    max-width: 150px;
+    display: flex;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.primero {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/75/Julia_set_spiral.png);
+    text-shadow: 2px 2px rgb(255, 255, 255);
+
+}
+
+.segundo{
+color: aliceblue;
+text-shadow: 2px 2px black;
+background-image: url(https://pymstatic.com/129146/conversions/arte-psicodelico-wide_webp.webp);
+}
+
+.tercero {
+    background-image: url(https://masdearte.com/media/reb_psicodelia2.jpg);
+    text-shadow: 2px 2px rgb(255, 255, 255);
+
+}
+
+.cuarto {
+    background-image: url(https://i0.wp.com/revistareplicante.com/wp-content/uploads/2010/05/hoffmann.jpg?ssl=1);
+color: aliceblue;
+text-shadow: 2px 2px black;
+
+}
+
+
+.cuidado {
+    text-align: center;
+    color: red;
+    background: #ff0000;
+    transition: 0.5s ease;
+}
+
+.cuidado:hover{
+    transform: scale(15);
+    transition: 0.5s;
+    animation: rotacionInfinita 0.5s linear infinite; 
+}
